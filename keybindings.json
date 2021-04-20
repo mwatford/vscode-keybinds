@@ -33,7 +33,7 @@
     {
       "key": "ctrl+\\",
       "command": "workbench.action.terminal.split",
-      "when": "terminalFocus"
+      "when": "terminalFocus && terminalProcessSupported"
     },
     {
       "key": "ctrl+shift+5",
@@ -104,7 +104,7 @@
       "when": "textInputFocus"
     },
     {
-      "key": "ctrl+shift+up",
+      "key": "ctrl+shift+i",
       "command": "editor.action.smartSelect.shrink",
       "when": "editorTextFocus"
     },
@@ -114,7 +114,7 @@
       "when": "editorTextFocus"
     },
     {
-      "key": "ctrl+shift+down",
+      "key": "ctrl+shift+k",
       "command": "editor.action.smartSelect.grow"
     },
     {
@@ -323,10 +323,6 @@
       "when": "editorTextFocus && foldingEnabled"
     },
     {
-      "key": "ctrl+tab",
-      "command": "workbench.action.togglePanel"
-    },
-    {
       "key": "ctrl+j",
       "command": "-workbench.action.togglePanel"
     },
@@ -378,5 +374,90 @@
       "key": "ctrl+right",
       "command": "-cursorWordEndRight",
       "when": "textInputFocus"
+    },
+    {
+      "key": "ctrl+w",
+      "command": "workbench.action.terminal.kill",
+      "when": "terminalFocus && terminalProcessSupported"
+    },
+    {
+      "key": "ctrl+]",
+      "command": "workbench.action.terminal.focusNextPane",
+      "when": "terminalFocus && terminalProcessSupported"
+    },
+    {
+      "key": "alt+down",
+      "command": "-workbench.action.terminal.focusNextPane",
+      "when": "terminalFocus && terminalProcessSupported"
+    },
+    {
+      "key": "ctrl+[",
+      "command": "workbench.action.terminal.focusPreviousPane",
+      "when": "terminalFocus && terminalProcessSupported"
+    },
+    {
+      "key": "alt+up",
+      "command": "-workbench.action.terminal.focusPreviousPane",
+      "when": "terminalFocus && terminalProcessSupported"
+    },
+    {
+      "key": "ctrl+up",
+      "command": "workbench.action.toggleMaximizedPanel",
+      "when": "terminalFocus"
+    },
+    {
+      "key": "shift+space",
+      "command": "workbench.action.closePanel",
+      "when": "terminalFocus"
+    },
+    {
+      "key": "ctrl+tab",
+      "command": "workbench.action.focusPanel",
+      "when": "!terminalFocus"
+    },
+    {
+      "key": "ctrl+shift+up",
+      "command": "scrollPageUp",
+      "when": "textInputFocus"
+    },
+    {
+      "key": "alt+pageup",
+      "command": "-scrollPageUp",
+      "when": "textInputFocus"
+    },
+    {
+      "key": "ctrl+shift+down",
+      "command": "scrollPageDown",
+      "when": "textInputFocus"
+    },
+    {
+      "key": "alt+pagedown",
+      "command": "-scrollPageDown",
+      "when": "textInputFocus"
+    },
+    {
+      "key": "ctrl+down",
+      "command": "cursorBottom",
+      "when": "textInputFocus"
+    },
+    {
+      "key": "ctrl+end",
+      "command": "-cursorBottom",
+      "when": "textInputFocus"
+    },
+    {
+      "key": "ctrl+up",
+      "command": "cursorPageUp",
+      "when": "textInputFocus"
+    },
+    {
+      "key": "pageup",
+      "command": "-cursorPageUp",
+      "when": "textInputFocus"
+    },
+    {
+      "key": "ctrl+tab",
+      "command": "workbench.action.focusActiveEditorGroup",
+      "when": "terminalFocus"
     }
   ]
