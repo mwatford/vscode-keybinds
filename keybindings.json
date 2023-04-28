@@ -279,6 +279,16 @@
     "when": "textInputFocus"
   },
   {
+    "key": "ctrl+i",
+    "when": "codeActionMenuVisible",
+    "command": "selectPrevCodeAction"
+  },
+  {
+    "key": "ctrl+k",
+    "when": "codeActionMenuVisible",
+    "command": "selectNextCodeAction"
+  },
+  {
     "key": "up",
     "command": "-cursorUp",
     "when": "textInputFocus"
