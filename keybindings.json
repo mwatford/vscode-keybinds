@@ -264,11 +264,6 @@
     "when": "editorTextFocus && !editorReadonly"
   },
   {
-    "key": "ctrl+k",
-    "command": "cursorDown",
-    "when": "textInputFocus"
-  },
-  {
     "key": "down",
     "command": "-cursorDown",
     "when": "textInputFocus"
@@ -276,7 +271,12 @@
   {
     "key": "ctrl+i",
     "command": "cursorUp",
-    "when": "textInputFocus"
+    "when": "!suggestWidgetVisible && textInputFocus"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "cursorDown",
+    "when": "!suggestWidgetVisible && textInputFocus"
   },
   {
     "key": "ctrl+i",
@@ -287,6 +287,16 @@
     "key": "ctrl+k",
     "when": "codeActionMenuVisible",
     "command": "selectNextCodeAction"
+  },
+  {
+    "key": "ctrl+i",
+    "command": "selectPrevSuggestion",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "selectNextSuggestion",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
   },
   {
     "key": "up",
